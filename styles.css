@@ -1,0 +1,143 @@
+:root {
+    --bg-color: #c0d2e9;
+    --container-bg-color: #f7f7f7;
+    --text-color: #4b4b4b;
+    --h1-color: #dbdfe7;
+    --link-color: #1b4670;
+    --link-hover-color: #2f7bc7;
+    --btn-color: #9fc5eb;
+    --btn-hover-color: rgb(129, 165, 201);
+    --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Container Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans-serif);
+    min-height: 100vh;
+    line-height: 1.5;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    background-color: var(--container-bg-color);
+    max-width: 880px;
+    margin: auto;
+    padding: 4rem;
+}
+
+#about-container {
+    display: grid;
+    grid-template-columns: auto 8rem;
+}
+
+#hobbies-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 1px solid #cdcdcd;
+    padding: 1rem;
+}
+
+/* Specific Element Styles */
+h1 {
+    color: #1c4da8;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+img {
+    width: 100%;
+    height: 10rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+}
+
+#piano-img:hover {
+    transform: scale(1.02);
+}
+
+#btn {
+    background-color: var(--btn-color);
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer; 
+}
+#btn:hover {
+    background-color: var(--btn-hover-color);
+}
+
+a {
+    color: var(--link-color)
+}
+a:hover {
+    color: var(--link-hover-color);
+}
+
+#btn-message {
+    padding-top: 0.5rem;
+    text-align: center;
+    transition: all 0.2s ease-out;
+}
+
+.d-none {
+    display: none;
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+table, td, th {
+    border: 1px solid gray;
+}
+table img {
+    width: 100%;
+}
+table img:hover {
+    height: 16rem;
+}
+table thead {
+    background-color: #ebebeb;
+}
+
+td, th {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    transition: all 0.2s ease-out;
+}
+
+tr > td:first-child {
+    width: 8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    main {
+        padding: 2rem;
+    }
+
+    #hobbies-container, #about-container {
+        grid-template-columns: auto;
+    }
+
+    tr > td:first-child {
+        width: 6rem;
+    }
+}
