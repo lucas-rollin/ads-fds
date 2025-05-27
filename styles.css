@@ -1,9 +1,9 @@
 :root {
     --bg-color: #c0d2e9;
-    --container-bg-color: #f7f7f7;
+    --container-bg-color: #f9f9f9;
     --text-color: #4b4b4b;
     --h1-color: #dbdfe7;
-    --link-color: #1b4670;
+    --link-color: #204a75;
     --link-hover-color: #2f7bc7;
     --btn-color: #9fc5eb;
     --btn-hover-color: rgb(129, 165, 201);
@@ -41,9 +41,13 @@ main {
     padding: 1rem;
 }
 
+#btn-container {
+    margin-left: 0.5rem;
+}
+
 /* Specific Element Styles */
 h1 {
-    color: #1c4da8;
+    color: var(--link-color);
     text-align: center;
 }
 
@@ -90,7 +94,6 @@ a:hover {
 
 #btn-message {
     padding-top: 0.5rem;
-    text-align: center;
     transition: all 0.2s ease-out;
 }
 
