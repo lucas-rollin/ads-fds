@@ -11,15 +11,21 @@
 }
 
 /* Container Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-sans-serif);
-    min-height: 100vh;
     line-height: 1.5;
     overflow-x: hidden;
     box-sizing: border-box;
-    margin: 0;
     padding: 0 1rem;
 }
 
@@ -28,6 +34,7 @@ main {
     max-width: 880px;
     margin: auto;
     padding: 4rem;
+    flex: 1;
 }
 
 #hobbies-container {
