@@ -1,12 +1,12 @@
 :root {
-    --bg-color: #c0d2e9;
+    --bg-color: #ced9e9;
     --container-bg-color: #f9f9f9;
     --text-color: #4b4b4b;
     --h1-color: #dbdfe7;
-    --link-color: #204a75;
-    --link-hover-color: #2f7bc7;
-    --btn-color: #9fc5eb;
-    --btn-hover-color: rgb(129, 165, 201);
+    --link-color: #395279;
+    --link-hover-color: #638bc7;
+    --btn-color: #ced9e9;
+    --btn-hover-color: #b0c3df;
     --font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -20,6 +20,7 @@ body {
     overflow-x: hidden;
     box-sizing: border-box;
     margin: 0;
+    padding: 0 1rem;
 }
 
 main {
@@ -29,20 +30,11 @@ main {
     padding: 4rem;
 }
 
-#about-container {
-    display: grid;
-    grid-template-columns: auto 8rem;
-}
-
 #hobbies-container {
     display: grid;
     grid-template-columns: auto auto;
     border: 1px solid #cdcdcd;
     padding: 1rem;
-}
-
-#btn-container {
-    margin-left: 0.5rem;
 }
 
 /* Specific Element Styles */
@@ -53,6 +45,7 @@ h1 {
 
 p {
     font-size: 1.2rem;
+    text-align: justify;
     margin-top: 0;
 }
 
@@ -76,6 +69,7 @@ img {
 
 #btn {
     background-color: var(--btn-color);
+    font-size: 1rem;
     padding: 0.5rem;
     border: 0;
     border-radius: 0.5rem;
@@ -131,16 +125,26 @@ tr > td:first-child {
 }
 
 /* Responsive adjustments */
-@media (max-width: 800px) {
+@media (max-width: 1124px) {
     main {
-        padding: 2rem;
-    }
-
-    #hobbies-container, #about-container {
-        grid-template-columns: auto;
+        padding: 2.5rem;
     }
 
     tr > td:first-child {
         width: 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    #hobbies-container {
+        grid-template-columns: auto;
+    }
+
+    tr > td:first-child {
+        width: 4rem;
     }
 }
